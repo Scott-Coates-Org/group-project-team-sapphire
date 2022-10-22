@@ -261,7 +261,7 @@ const bookingsSlice = createSlice({
     },
     [getFirstBookingPage.rejected]: (state, action) => {
       state.loading = "rejected";
-      state.error = action.payload;
+      state.error = action.payload.message;
     },
 
     // GET PREV BOOKING PAGE
@@ -279,7 +279,7 @@ const bookingsSlice = createSlice({
     },
     [getPrevBookingPage.rejected]: (state, action) => {
       state.loading = "rejected";
-      state.error = action.payload;
+      state.error = action.payload.message;
     },
 
     // GET NEXT BOOKING PAGE
@@ -310,7 +310,7 @@ const bookingsSlice = createSlice({
     },
     [getNextBookingPage.rejected]: (state, action) => {
       state.loading = "rejected";
-      state.error = action.payload;
+      state.error = action.payload.message;
     },
 
     // GET BOOKINGS BY DATE
@@ -328,7 +328,7 @@ const bookingsSlice = createSlice({
     [getBookingsByDate.rejected]: (state, action) => {
       console.log("FAILED");
       state.loading = "failed";
-      state.error = action.payload;
+      state.error = action.payload.message;
     },
 
     [createBooking.pending]: (state, action) => {
@@ -342,7 +342,7 @@ const bookingsSlice = createSlice({
     },
     [createBooking.rejected]: (state, action) => {
       state.loading = "rejected";
-      state.error = action.payload;
+      state.error = action.payload.message;
     },
 
     [updateBooking.pending]: (state, action) => {
@@ -353,7 +353,7 @@ const bookingsSlice = createSlice({
     },
     [updateBooking.rejected]: (state, action) => {
       state.loading = "rejected";
-      state.error = action.payload;
+      state.error = action.payload.message;
     },
 
     [cancelBooking.pending]: (state, action) => {
@@ -365,7 +365,7 @@ const bookingsSlice = createSlice({
     },
     [cancelBooking.rejected]: (state, action) => {
       state.loading = "rejected";
-      state.error = action.payload;
+      state.error = action.payload.message;
     },
 
     [getBookingById.pending]: (state, action) => {
